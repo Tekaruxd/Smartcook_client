@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="SmartCook - Recipes for cooking according to your preferences."
+		/>
+		<meta
+			name="keywords"
+			content="SmartCook, recipes, cooking, preferences, food"
+		/>
+		<meta name="author" content="SmartCook Erasmus+" />
+		<title>SmartCook - Recipes</title>
+		<link rel="stylesheet" href="www/css/style.css" />
+	</head>
+	<body>
+		<header>
+			<h1>SmartCook</h1>
+			<button class="dark" id="darkModeToggle">Dark Mode</button>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Set Preferences</a></li>
+					<li><a href="#">Generated Recipes</a></li>
+					<li><a href="#">Shopping List</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="filters" class="filters">{nav-recipe-category}</div>
+			<div id="recipeList" class="recipe-container"></div>
+		</main>
+		<footer><p>2024 SmartCook</p></footer>
+		<script src="www/js/script.js"></script>
+	</body>
+</html>
