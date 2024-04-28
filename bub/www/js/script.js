@@ -6,7 +6,20 @@ function load(url, element) {
 			element.innerHTML = data;
 		});
 }
-load(api_url + "recipes.php", document.getElementById("recipes"));
+function load_recipe(url) {
+	fetch(url)
+		.then((response) => response.text())
+		.then((data) => {
+			const newTab = window.open();
+			newTab.document.write(data);
+		});
+}
+
+function sendRequest(id) {
+	load_recipe(api_url + "/recipe.php?id=" + encodeURIComponent(id));
+}
+
+load(api_url + "recipes.php", document.getElementById("recipeList"));
 
 let buttons = document.querySelectorAll("#recipe-category-btns button");
 buttons.forEach((button) => {

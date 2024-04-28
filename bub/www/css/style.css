@@ -140,7 +140,9 @@ button:hover {
 	margin-bottom: 0;
 	color: #444;
 }
-
+.recipe:hover {
+	cursor: pointer;
+}
 footer {
 	background-color: #333;
 	color: #fff;
@@ -150,6 +152,7 @@ footer {
 .hidden {
 	display: none;
 }
+
 /*
  colors: #376337,#b8cab8,#ebece3,#a8a8a6,#444,#333
 */
