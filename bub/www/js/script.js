@@ -8,7 +8,7 @@ function load(url, element) {
 }
 
 function sendRequest(id) {
-	window.open(api_url + "recipe.php?id=" + encodeURIComponent(id));
+	window.open("http://localhost/bub/recipe/?id=" + encodeURIComponent(id));
 }
 
 load(api_url + "recipes.php", document.getElementById("recipeList"));

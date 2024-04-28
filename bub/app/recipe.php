@@ -12,15 +12,15 @@ try {
     echo $e->getMessage();
 }
 $recipes = "";
-$tmpltRecipe = file_get_contents("../view/recipe_page.html");
+$tmpltRecipe = file_get_contents("../view/single_recipe.html");
 
 $recipe = $data['data'];
 $recipes .= str_replace(
-        ["{name}","{difficulty}","{price}", "{description}", "{author}"],
-        [ucfirst($recipe["name"]),$recipe["difficulty"],$recipe["price"], $recipe["description"], $recipe["author"]],
-        $tmpltRecipe
-    );
+    ["{name}", "{difficulty}", "{price}", "{dish_category}", "{recipe_category}", "{country}", "{tolerance}",  "{description}", "{author}"],
+    [ucfirst($recipe["name"]), $recipe["difficulty"], $recipe["price"], implode(", ", $recipe["dish_category"]), implode(", ", $recipe["recipe_category"]), $recipe["country"],implode(", ", $recipe["tolerance"]),   $recipe["description"], $recipe["author"]],
+    $tmpltRecipe
+);
 
 echo $recipes;
 
-
+// "{}",  $recipe[""] implode(", ", $recipe["ingredient"]), $recipe["tolerance"], "{tolerance}", "{ingredient}",
