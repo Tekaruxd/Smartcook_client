@@ -152,6 +152,9 @@ footer {
 .hidden {
 	display: none;
 }
+fieldset {
+	width: auto;
+}
 
 /*
  colors: #376337,#b8cab8,#ebece3,#a8a8a6,#444,#333

@@ -1,4 +1,5 @@
 <?php
+// input example http://localhost/bub/app/recipe.php?id=8
 require_once("SmartCookClient.php");
 
 $id = filter_input(INPUT_GET, "id");
